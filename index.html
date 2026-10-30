@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+    </style>
 
     <link
       rel="stylesheet"
@@ -14,13 +22,13 @@
     />
     <title>FitLeague</title>
     <script src="js/data.js" defer type="module"></script>
-    <script src="js/apps.js" defer type="module"></script>
+    <script src="js/" defer type="module"></script>
   </head>
   <body>
     <header>
       <nav class="bg-[#101828]  flex justify-between px-[5%] items-center h-15">
         <a href="index.html" class="flex items-center gap-[10px]">
-          <span class="brand-mark font-extrabold text-3xl text-[#101828] bg-[#B6F23A] w-[2.5rem] relative flex items-center justify-center rounded-xl ">F</span>
+          <span class="brand-mark font-black text-3xl text-[#101828] bg-[#B6F23A] w-[2.5rem] relative flex items-center justify-center rounded-xl" style="font-family: 'Dancing Script', cursive;">F</span>
           <span class="brand-name text-white font-bold text-xl">FitLeague</span>
         </a>
 
@@ -28,8 +36,8 @@
           <li>
             <a href="index.html" class="no-under-line navbar_link font-semibold text-white text-xs"></i>Accueil</a>
           </li>
-          <li><a href="#" class="no-under-line navbar_link font-semibold text-white text-xs">Challenges</a></li>
-          <li><a href="#" class="no-under-line navbar_link font-semibold text-white text-xs">Participants</a></li>
+          <li><a href="challenges.html" class="no-under-line navbar_link font-semibold text-white text-xs">Challenges</a></li>
+          <li><a href="participants.html" class="no-under-line navbar_link font-semibold text-white text-xs">Participants</a></li>
           <li><a href="#" class="no-under-line navbar_link font-semibold text-white text-xs">Classement</a></li>
           <!-- <li><a href="#" class="no-under-line navbar_link font-semibold text-white text-xs">about</a></li> -->
         </ul>
@@ -41,5 +49,229 @@
         <a href="#" class="text-white bg-[#B6F23A] w-[7rem] h-[60%] flex justify-center items-center rounded-lg font-bold text-[#101828] text-sm">rejoindre</a>
       </nav>
     </header>
+
+
+    <main>
+        <section class="Accueil-herosection bg-[url(assets/images/Herosection_photo.png)] bg-cover mt-[4%] pl-[5%] mx-[2.5%] pt-[5%] h-[60vh] rounded-4xl flex justify-between">
+            <div class="w-[70%]">
+                <label class="w-[17%] h-[10%] mb-[1%] rounded-2xl font-bold text-[#B6F23A] text-sm bg-[#1A281C]  font-['Inter', sans serif] flex items-center justify-center">Ton espace sportif</label>
+                <h2 class="font-black text-[#101828] text-5xl mb-[5%] leading-[140%]">
+                Challenges tes limites, <br /><span class="text-[#B6F23A]">Depassé tes objectifs.</span>
+                </h2>
+                <p class="font-small text-[#101828] text-sm bg-[#] font-['Inter', sans serif]">
+                Retrouve tes amis, lance des défis et transforme chaque effort en
+                victoir.
+                </p>
+                <div class="flex gap-[3rem] mt-[1.5rem] pb-[2rem]">
+                    <a href="#" class=" text-[#101828] w-[22%] h-[3rem] font-semibold text-xl bg-[#B6F23A] rounded-2xl flex items-center justify-center ">start challenge </a>
+                    <a href="#" class=" text-[#101828] w-[22%] font-semibold text-xl bg-transparent border-2 border-[#101828] rounded-2xl flex items-center justify-center ">decouvrire les défis</a>
+                </div>
+            </div>
+
+            <div class="rounded-full bg-[#1A281C] ">
+                <!-- <img src="assets/images/Herosection_photo.png" alt=""> -->
+            </div>
+
+        </section>
+
+        <!--dashboard-->
+
+
+        <!--section : defis -->
+        <section class="Accueil-challenges mt-[2.5%] mx-[2.5%]">
+        <div class="">
+            <div  class="flex justify-between mx-[4.5%]">
+                <div>
+                    <h2 class="text-3xl font-bold leading-[145%] text-[#101828]  ">Les défis poppulaires</h2>
+                    <p class="text-sm text-[#667085]">selectionez un défis, 
+                        <!-- <a href="#">join challenge</a> -->
+                    </p>
+                </div>
+                <a href="#" class=" min-w-[15%] max-h-12 bg-[#B6F23A] flex justify-center items-center text-.5xl font-semibold text-[#101828] rounded-[10px]">voir tous les défis ...</i></a>
+            </div>
+            <div class="Accueil-challenges_cards flex justify-evenly mt-[1.5%]">
+                <div class=" w-[20%] rounded-lg pb-[10px] bg-[#f6f8fd] shadow-md shadow-black ">
+                <article>
+                    <img src="assets/images/Coureur sur sentier face au lac alpin.png" alt="" class="rounded-lg" />
+                    <span class="challenge-status relative flex justify-center items-center  bg-[#ddf7df] -top-[12.5px] left-[2rem] text-[#101828] text-[16px] h-[5%] w-[25%] rounded-xl font-bold"> actif</span>
+                    <time datetime="" class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">30jours</time>
+                    <h3 class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">defi 30 jours de course</h3>
+                    <small class="sport pl-[5%] text-[16px] font-semibold text-[#0b8142] ">course a pied</small><br>
+                    <span class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">25 Participants</span><br>
+                    <a href="#" class="flex justify-center items-center bg-[#0b8142] mx-[5%] h-10 rounded-lg">join challenge</a>
+                </article>
+                </div>
+
+                <div class=" w-[20%] rounded-lg pb-[10px] bg-[#f6f8fd] shadow-md shadow-black ">
+                <article>
+                    <img src="assets/images/Cycliste au coucher du soleil en montagne.png" alt="" class="rounded-lg" />
+                    <span class="challenge-status relative flex justify-center items-center  bg-[#ddf7df] -top-[12.5px] left-[2rem] text-[#101828] text-[16px] h-[5%] w-[25%] rounded-xl font-bold"> actif</span>
+                    <time datetime="" class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">3jours</time>
+                    <h3 class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">defi 75Km de cycling</h3>
+                    <small class="sport pl-[5%] text-[16px] font-semibold text-[#0b8142] ">cycling</small><br>
+                    <span class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">17 Participants</span><br>
+                    <a href="#" class="flex justify-center items-center bg-[#0b8142] mx-[5%] h-10 rounded-lg">join challenge</a>
+                </article>
+                </div>
+                <div class=" w-[20%] rounded-lg pb-[10px] bg-[#f6f8fd] shadow-md shadow-black ">
+                <article>
+                    <img src="assets/images/Nageur en pleine action dans la piscine.png" alt="" class="rounded-lg" />
+                    <span class="challenge-status relative flex justify-center items-center  bg-[#ddf7df] -top-[12.5px] left-[2rem] text-[#101828] text-[16px] h-[5%] w-[25%] rounded-xl font-bold"> actif</span>
+                    <time datetime="" class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">3jours</time>
+                    <h3 class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">defi 3 jours de </h3>
+                    <small class="sport pl-[5%] text-[16px] font-semibold text-[#0b8142] ">course</small><br>
+                    <span class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">22 Participants</span><br>
+                    <a href="#" class="flex justify-center items-center bg-[#0b8142] mx-[5%] h-10 rounded-lg">join challenge</a>
+                </article>
+                </div>
+                <div class=" w-[20%] rounded-lg pb-[10px] bg-[#f6f8fd] shadow-md shadow-black ">
+                <article>
+                    <img src="assets/images/Pompes intenses dans la salle de sport.png" alt="" class="rounded-lg" />
+                    <span class="challenge-status relative flex justify-center items-center  bg-[#ddf7df] -top-[12.5px] left-[2rem] text-[#101828] text-[16px] h-[5%] w-[25%] rounded-xl font-bold"> terminé</span>
+                    <time datetime="" class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">5jours</time>
+                    <h3 class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">defi 400 de Pompes intenses</h3>
+                    <small class="sport pl-[5%] text-[16px] font-semibold text-[#0b8142] ">Pompes intenses</small><br>
+                    <span class="pl-[5%] text-[16px] font-semibold text-[#1A281C]">12 Participants</span><br>
+                    <a href="#" class="flex justify-center items-center bg-[#0b8142] mx-[5%] h-10 rounded-lg">join challenge</a>
+                </article>
+                </div>                
+            </div>        
+        </div>
+        </section>
+
+   <section class="acceuil-leaderboard w-100vw h-93.5 mx-[6%] mt-7.5 mb-20 bg-slate-50 px-10 rounded-xl  shadow-sm shadow-black ">
+            <div class="flex justify-between pt-5">
+              <div>
+                <h2 class="text-3xl font-bold ">Classement</h2>
+                <p class="font-small text-slate-500">les meilleur Participants</p>
+              </div>
+                <a href="#" class=" min-w-[15%] max-h-12 bg-[#B6F23A] flex justify-center items-center text-.5xl font-semibold text-[#101828] rounded-[10px] hover:outline-[#B6F23A]  transition delay-100 duration-250 ease-in-out hover:-translate-y-1 hover:scale-110">Classement</i></a>
+            </div>
+
+          <div class="flex justify-between relative top-5 ">
+            <div class="accueil-podium flex justify-center w-[55vw] h-[35vh] py-20 gap-2 border-1 border-slate-200 rounded-xl shadow-xs shadow-black">
+              <article class="Participant-number2 w-55 h-43 border-2 border-black flex justify-center items-center flex-col text-white bg-[#101828] rounded-lg">
+                <h2>2</h2>
+                <!-- <img src="" alt=""> -->
+                 <i class="fa-solid fa-circle-user text-5xl text-slate-300"></i>
+                <h3>Alex Smith</h3>
+                <p>923 points</p>
+              </article>
+              <article class="Participant-number1 w-55 h-53 relative -top-10 flex justify-center items-center flex-col bg-[#FFF5CC] border-2 border-[#F6CE56] rounded-lg">
+                <i class="fa-solid fa-crown text-[#F6CE56] text-3xl"></i>
+                <h2>1</h2>
+                <!-- <img src="" alt=""> -->
+                 <i class="fa-solid fa-circle-user text-5xl text-slate-300"></i>
+                <h3>Sarah Lefèvre</h3>
+                <p>1089 points</p>
+              </article>
+              <article class="Participant-number3 w-55 h-33 border-2 border-black relative top-10 flex justify-center items-center flex-col text-white bg-[#101828] rounded-lg">
+                <h2>3</h2>
+                <!-- <img src="" alt=""> -->
+                 <i class="fa-solid fa-circle-user text-5xl text-slate-300"></i>
+                <h3>Marcus Vance</h3>
+                <p>902 points</p>
+              </article>
+            </div>
+            <div class="participants-acceuillist w-95 border-1 border-slate-200 rounded-xl shadow-xs shadow-black">
+              
+              <table class="table-auto border-separate border border-gray-400 rounded-lg">
+                  <caption class="caption-bottom mt-2 mx-5 border-t-1 border-slate-400">
+                  <a href="#" class="text-slate-500">afficher tous</a>
+                  </caption>
+                <thead class="">
+                  <tr class="">
+                    <th class="w-10   border-1 border-slate-400 rounded-s-lg">cls</th>
+                    <th class="w-35  border-1 border-slate-400">Nom</th>
+                    <th class="w-30  border-1 border-slate-400">ID-#</th>
+                    <th class="w-25  border-1 border-slate-400 rounded-e-lg">Points</th>
+                  </tr>
+                </thead>
+
+                <tbody >
+                  <tr> 
+                    <td class="text-center"><i class="fa-solid fa-crown text-[#F6CE56] text-xl"></i></td>
+                    <td class="">Sarah Lefèvre</td>
+                    <td class="">#100258</td>
+                    <td class="">1089</td>
+                  </tr>
+                  <tr >
+                    <td class="text-center">2</td>
+                    <td>Alex Smith</td>
+                    <td>#100221</td>
+                    <td>923</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">3</td>
+                    <td>Marcus Vance</td>
+                    <td>#100023</td>
+                    <td>902</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">4</td>
+                    <td>Marcus Vance</td>
+                    <td>#100023</td>
+                    <td>902</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">5</td>
+                    <td>Marcus Vance</td>
+                    <td>#100023</td>
+                    <td>902</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">6</td>
+                    <td>Marcus Vance</td>
+                    <td>#100023</td>
+                    <td>902</td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">7</td>
+                    <td>Marcus Vance</td>
+                    <td>#100023</td>
+                    <td>902</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <footer class="bg-[#101828] text-white pt-10 px-35 ">
+          <div class="footer-top flex justify-between mb-5">
+            <div>
+              <a href="index.html" class="flex items-center gap-[10px] mb-10">
+              <span class="brand-mark font-black text-3xl text-[#101828] bg-[#B6F23A] w-[2.5rem] relative flex items-center justify-center rounded-xl" style="font-family: 'Dancing Script', cursive;">F</span>
+              <span class="brand-name text-white font-bold text-xl">FitLeague</span>
+              </a>
+              <p>Train Together. Compete Together. Win Together.</p>
+            </div>
+            <article>
+              <p>Liens rapides</p>
+              <ul>
+                <li><a href="index.html" class="text-[#C5D1DB] hover:text-[#B6F23A]">Accueil</a></li>
+                <li><a href="challenges.html" class="text-[#C5D1DB] hover:text-[#B6F23A]">challenges</a></li>
+                <li><a href="participants.html" class="text-[#C5D1DB] hover:text-[#B6F23A]">Participants</a></li>
+                <li><a href="#" class="text-[#C5D1DB] hover:text-[#B6F23A]">Classement</a></li>
+              </ul>
+            </article>
+            <article>
+              <p>reseaux</p>
+              <a href="#"><i class="fa-brands fa-square-facebook text-blue-700"></i></a>
+              <a href="#"><i class="fa-brands fa-square-instagram text-pink-500 "></i></a>
+              <a href="#"><i class="fa-brands fa-square-twitter text-cyan-500"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube text-rose-500"></i></a>
+            </article>
+            <a href="#" class=" min-w-[15%] max-h-12 bg-[#B6F23A] flex justify-center items-center text-.5xl font-semibold text-[#101828] rounded-[10px] hover:outline-2 hover:outline-offset-2 hover:outline-[#B6F23A]  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">voir tous les défis ...</i></a>
+
+          </div>
+          <div class="footer-bot text-xs text-[#E0E8EF] font-thin flex justify-between border-t-2 border-[#E0E8EF] pt-2  pb-2">
+            <h5 class="">© 2025 FitLeague. Tous droits réservés.</h5>
+            <div class="flex gap-7 ">
+              <h5 class="pr-7 border-r-1  border-[#E0E8EF]">Mentions légales</h5>
+              <h5>Politique de confidentialité</h5>
+            </div>
+          </div>
+        </footer>
+    </main>
   </body>
 </html>
