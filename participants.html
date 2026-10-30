@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>FitLeague</title>
+    <script src="js/data.js" defer type="module"></script>
+    <script src="js/participants.js" defer type="module"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-[#101828]  flex justify-between px-[5%] items-center h-15">
+        <a href="index.html" class="flex items-center gap-[10px]">
+          <span class="brand-mark font-black text-3xl text-[#101828] bg-[#B6F23A] w-[2.5rem] relative flex items-center justify-center rounded-xl" style="font-family: 'Dancing Script', cursive;">F</span>
+          <span class="brand-name text-white font-bold text-xl">FitLeague</span>
+        </a>
+
+        <ul class="flex justify-between w-xl ">
+          <li>
+            <a href="index.html" class="no-under-line navbar_link font-semibold text-white text-xs"></i>Accueil</a>
+          </li>
+          <li><a href="challenges.html" class="no-under-line navbar_link font-semibold text-white text-xs">Challenges</a></li>
+          <li><a href="participants.html" class="no-under-line navbar_link font-semibold text-white text-xs">Participants</a></li>
+          <li><a href="#" class="no-under-line navbar_link font-semibold text-white text-xs">Classement</a></li>
+        </ul>
+        <!-- <div>
+          <i class="fa-solid fa-magnifying-glass text-white relative left-[30px] "></i>
+          <input type="search" name="search" id="search-input" />
+        </div> -->
+
+        <a href="#" class="text-white bg-[#B6F23A] w-[7rem] h-[60%] flex justify-center items-center rounded-lg font-bold text-[#101828] text-sm">rejoindre</a>
+      </nav>
+    </header>
+    <main>
+        <section class="m-20">
+            <div >
+                <h2 class="text-3xl font-bold text-[#101828]">Participants</h2>
+                <p class="text-slate-600 mb-5">Gérez les participants et leurs inscriptions aux défis.</p>
+                <div class="flex justify-between mb-15">
+                   <label class="search_chall  flex items-center">
+                      <span aria-hidden="true" class="text-3xl relative left-9 text-[#101828] pointer-events-none">⌕</span>
+                      <input id="searchInput" class="pl-1 border-2 border-gray-400 rounded-lg w-110 h-10 pl-10 " type="search"
+                        placeholder="Search challenges..." aria-label="Search challenges">
+                    </label>
+                    <button type="button" class="bg-[#B6F23A] w-50 h-10 flex justify-center items-center rounded-lg font-bold text-[#101828] text-sm hover:cursor-pointer">＋  Ajouter un participant</button>
+                </div>
+            </div>
+            <div>
+                <table class="bg-slate-100 shadow-sm shadow-black  rounded-lg">
+                <thead class="w-full border-b-1 border-slate-300">
+                  <tr class="">
+                    <th class="w-80 text-start p-2">Nom</th>
+                    <th class="w-60 text-start p-2">Pseudo</th>
+                    <th class="w-50 text-start p-2">Défis inscrits</th>
+                    <th class="w-20 text-start p-2">action</th>
+                  </tr>
+                </thead>
+
+                <tbody id="participant-row_list" class="" >
+                  <!-- <tr class="border-b-1 border-[#edf0f5]">
+                    <td class="py-2 pl-2 flex gap-4"> <img class="w-7 h-7 p-1 rounded-full ring-2 ring-default" src="users_profile/481040803975295732.jpg" alt="Bordered avatar">Sarah Lefèvres</td>
+                    <td class="py-2"></td>
+                    <td class="py-2"></td>
+                    <td class="py-2"><div class="flex gap-2"><button class="w-7.5 h-7.5 flex items-center justify-center bg-sky-100 rounded-lg text-sky-500"><i class="fa-solid fa-pencil"></i></button> <button class="rounded-lg  bg-rose-100 text-rose-500 w-7.5 h-7.5 flex items-center justify-center"><i class="fa-regular fa-circle-xmark "></i></button></div></td>
+                  </tr> -->
+
+                </tbody>
+              </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#101828] text-white pt-10 px-35 ">
+      <div class="footer-top flex justify-between mb-5">
+        <div>
+          <a href="index.html" class="flex items-center gap-[10px] mb-10">
+            <span
+              class="brand-mark font-black text-3xl text-[#101828] bg-[#B6F23A] w-[2.5rem] relative flex items-center justify-center rounded-xl"
+              style="font-family: 'Dancing Script', cursive;">F</span>
+            <span class="brand-name text-white font-bold text-xl">FitLeague</span>
+          </a>
+          <p>Train Together. Compete Together. Win Together.</p>
+        </div>
+        <article>
+          <p>Liens rapides</p>
+          <ul>
+            <li><a href="#" class="text-[#C5D1DB] hover:text-[#B6F23A]">Accueil</a></li>
+            <li><a href="#" class="text-[#C5D1DB] hover:text-[#B6F23A]">challenges</a></li>
+            <li><a href="#" class="text-[#C5D1DB] hover:text-[#B6F23A]">Participants</a></li>
+            <li><a href="#" class="text-[#C5D1DB] hover:text-[#B6F23A]">Classement</a></li>
+          </ul>
+        </article>
+        <article>
+          <p>reseaux</p>
+          <a href="#"><i class="fa-brands fa-square-facebook text-blue-700"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram text-pink-500 "></i></a>
+          <a href="#"><i class="fa-brands fa-square-twitter text-cyan-500"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube text-rose-500"></i></a>
+        </article>
+        <a href="#"
+          class=" min-w-[15%] max-h-12 bg-[#B6F23A] flex justify-center items-center text-.5xl font-semibold text-[#101828] rounded-[10px] hover:outline-2 hover:outline-offset-2 hover:outline-[#B6F23A]  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">voir
+          tous les défis ...</i></a>
+
+      </div>
+      <div
+        class="footer-bot text-xs text-[#E0E8EF] font-thin flex justify-between border-t-2 border-[#E0E8EF] pt-2  pb-2">
+        <h5 class="">© 2025 FitLeague. Tous droits réservés.</h5>
+        <div class="flex gap-7 ">
+          <h5 class="pr-7 border-r-1  border-[#E0E8EF]">Mentions légales</h5>
+          <h5>Politique de confidentialité</h5>
+        </div>
+      </div>
+    </footer>
+    </body>
+</html>
