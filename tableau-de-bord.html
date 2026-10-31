@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class=" h-screen bg-gray-100">
+    <div class="parent-container-tableau-de-bord">
+
+        <!--Heading-->
+        <div class="flex justify-between mb-8 ">
+            <div class="ml-8 mt-5 flex flex-col font-[inter]">
+                <h1 class="font-bold text-lg">Tableau de bord</h1>
+                <p class="font-thin text-sm">Vue d'ensemble de votre activité sportive</p>
+
+            </div>
+            <div class="mr-8"><a href="" class="bg-lime-400 rounded-xl h-[35px] flex items-center p-2 mt-5"> + Créer in
+                    défi</a></div>
+        </div>
+        <!--------->
+        <!--Cards-->
+        <div class="grid grid-cols-4 gap-4  w-full pl-9 pr-9 mb-8 ">
+
+            <!-- Card 1 -->
+            <div class="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 ">
+                <img class="text-5xl h-9 w-9 bg-[#7DCB0016] rounded-full" src="assets/trophy.png" alt="">
+                <!-- <i class="fa-solid fa-trophy text-5xl"></i> -->
+                <div>
+                    <p>12</p>
+                    <p>Défis totaux</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4">
+                <!-- <i class="fa-solid fa-trophy text-5xl"></i> -->
+                <img class="text-5xl h-9 w-9 bg-[#FF6C1416] rounded-full" src="assets/users.png" alt="">
+                <div>
+                    <p>48</p>
+                    <p>Participants</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4">
+                <!-- <i class="fa-solid fa-trophy text-5xl"></i> -->
+                <img class="text-5xl h-9 w-9 bg-[#00A34F16] rounded-full" src="assets/flame.png" alt="">
+                <div>
+                    <p>7</p>
+                    <p>Défis actifs</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4">
+                <!-- <i class="fa-solid fa-trophy text-5xl"></i> -->
+                <img class="text-5xl h-9 w-9 bg-[#009D5816] rounded-full" src="assets/Vector (2).png" alt="">
+                <div>
+                    <p>5</p>
+                    <p>Défis terminés</p>
+                </div>
+            </div>
+
+        </div>
+        <!-------------->
+
+        <!--Defits recents-->
+        <div class="flex">
+            <div class="   bg-[#FFFFFF] w-1/2 border-1 border-solid border-slate-200 rounded-xl p-8  ml-9  ">
+                <div class="flex justify-around mb-8">
+                    <h4 class="text-[#14263D font-semibold
+]">Défis récents</h4>
+                    <a href="#" class=" text-[#00994C] font-semibold
+">Voir tout</a>
+
+                </div>
+                <!--Defi 30 jours de course-->
+
+                <div class=" grid grid-cols-4 border-b-1 border-b-slate-200 pb-4 pt-4 ">
+                    <img class="flex h-11 w-11 rounded-xl "
+                        src="https://img.passeportsante.net/1200x675/2021-05-03/i101950-comment-courir-10-km-en-45-minutes.webp"
+                        alt="">
+                    <div class="flex flex-col">
+                        <p>Défi 30 jours de course</p>
+                        <p class="text-[#71869E]">Course à pied</p>
+                    </div>
+                    <p
+                        class="bg-[#E1F8EB] rounded-xl h-[25px] w-[35px] text-[#00994C] flex items-center justify-center justify-self-center">
+                        actif</p>
+                    <p>12/04/2026</p>
+                </div>
+
+                <div class=" grid grid-cols-4 border-b-1 border-b-slate-200 pb-4 pt-4">
+                    <img class="h-11 w-11 rounded-xl"
+                        src="https://img.passeportsante.net/1200x675/2021-05-03/i101950-comment-courir-10-km-en-45-minutes.webp"
+                        alt="">
+                    <div class="flex flex-col">
+                        <p>Challenge musculation</p>
+                        <p class="text-[#71869E]">Musculation</p>
+                    </div>
+                    <p
+                        class="bg-[#E1F8EB] rounded-xl h-[25px] w-[35px] text-[#00994C] rounded-xl h-[25px] w-[35px] text-[#00994C] justify-self-center ">
+                        actif</p>
+                    <p>12/04/2026</p>
+                </div>
+                <div class="grid grid-cols-4  border-b-1 border-b-slate-200 pb-4 pt-4">
+                    <img class="h-11 w-11 rounded-xl"
+                        src="
+                        https://img.passeportsante.net/1200x675/2021-05-03/i101950-comment-courir-10-km-en-45-minutes.webp" alt="">
+                    <div class="flex flex-col">
+                        <p>Défi vélo . 100km</p>
+                        <p class="text-[#71869E]">Course à pied</p>
+                    </div>
+                    <p class="bg-[#E1F8EB] rounded-xl h-[25px] w-[35px] text-[#00994C] justify-self-center">Terminé</p>
+                    <p>12/04/2026</p>
+                </div>
+                <div class=" grid grid-cols-4  border-b-1 border-b-slate-200 pb-4 pt-4 items-center ">
+                    <img class="h-11 w-11 rounded-xl"
+                        src="https://img.passeportsante.net/1200x675/2021-05-03/i101950-comment-courir-10-km-en-45-minutes.webp"
+                        alt="">
+                    <div class="flex flex-col">
+                        <p>Yoga quotidien</p>
+                        <p class="text-[#71869E]">Yoga</p>
+                    </div>
+                    <p class="bg-[#E1F8EB] rounded-xl h-[25px] w-[35px] text-[#00994C] justify-self-center">actif</p>
+                    <p>12/04/2026</p>
+                </div>
+                <div class=" grid grid-cols-4 items-center pt-4 ">
+                    <img class="h-11 w-11 rounded-xl"
+                        src="https://img.passeportsante.net/1200x675/2021-05-03/i101950-comment-courir-10-km-en-45-minutes.webp"
+                        alt="">
+                    <div class="flex flex-col">
+                        <p>Défi perte de poids</p>
+                        <p class="text-[#71869E]">Fitness</p>
+                    </div>
+                    <p
+                        class="bg-[#E1F8EB] rounded-xl h-[25px]  bg-w-[10px] w-[35px] text-[#00994C] justify-self-center">
+                        actif</p>
+                    <p>12/04/2026</p>
+                </div>
+            </div>
+            <!-------------->
+            <!--Meilleurs performances-->
+            <!-------------->
+            <div class=" grid-rows-6 bg-[#FFFFFF] w-1/2 border-1 border-solid border-slate-200 rounded-xl p-8 pb-3 mr-9 ml-5"" >
+                <div class=" flex justify-around mb-">
+                <h4 class="text-[#14263D] font-semibold">Meilleurs performances</h4>
+                <a class="font-semibold text-[#00994C]" href="#">Voir tout</a>
+            </div>
+
+            <div class="grid grid-cols-3 pb-4 pt-4 border-b-1 border-b-slate-200">
+                <img class="flex h-7 w-7 bg-[#E5EFF6] rounded-full" src="assets/footprints.png" alt="">
+                <div class="flex flex-col">
+                    <p>Plus longue distance (course)</p>
+                    <p>Albert Martin</p>
+                </div>
+                <p class="flex justify-center">42,5 Km</p>
+            </div>
+
+            <div class="grid grid-cols-3 pb-4 pt-4 border-b-1 border-b-slate-200">
+                <img class="flex h-7 w-7 bg-[#E5EFF6] rounded-full" src="assets/trophy (1).png " alt="">
+                <div class="flex flex-col">
+                    <p>Plus de calories brûlées</p>
+                    <p>Sarah Lefèvre</p>
+                </div>
+                <p class="flex justify-center">1250 kcal</p>
+            </div>
+            <div class="grid grid-cols-3 pb-4 pt-4 border-b-1 border-b-slate-200">
+                <img class="flex h-7 w-7 bg-[#E5EFF6] rounded-full" src="assets/person-standing.png" alt="">
+                <div class="flex flex-col">
+                    <p>Plus de pas en une journée</p>
+                    <p>Thomas Dubois</p>
+                </div>
+                <p class="flex justify-center">18 428 pas</p>
+            </div>
+            <div class="grid grid-cols-3 pb-4 pt-4 border-b-1 border-b-slate-200">
+                <img class="flex h-7 w-7 bg-[#E5EFF6] rounded-full" src="assets/dumbbell.png" alt="">
+                <div class="flex flex-col">
+                    <p>Plus de séances (7j)</p>
+                    <p>Emma Richard</p>
+                </div>
+                <p class="flex justify-center">28 séances</p>
+            </div>
+            <div class="grid grid-cols-3  pt-4 ">
+                <img class="flex h-7 w-7 bg-[#E5EFF6] rounded-full" src="assets/Vector (3).png" alt="">
+                <div class="flex flex-col">
+                    <p>Plus de temps actif</p>
+                    <p>Lucas Bernard</p>
+                </div>
+                <p class="flex justify-center">12 h</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Banner-->
+    <div class="flex  
+ bg-slate-900 rounded-xl mr-9 ml-9 mt-5 overflow-hidden flex items-center gap-10">
+        <img class="mask-r-from-40% "
+            src="https://media.istockphoto.com/id/499194673/fr/photo/sport-h%C3%A9ros.jpg?s=612x612&w=0&k=20&c=N8cxoEETvnBC3sO16r97u-e0atuXfcNyDdlSkXWJkUc="
+            alt="">
+        <div>
+            <h2 class="text-lg font-extrabold text-white">Ensemble, plus forts!</h2>
+            <p class="text-white">Relevez des défis, progressez et vivez l'expérience du sport en équipe.</p>
+        </div>
+        <button class="bg-lime-400 h-[40px] rounded-xl p-4 flex items-center ml-5">Voir les défis →</button>
+    </div>
+    </div>
+</body>
+
+</html>
