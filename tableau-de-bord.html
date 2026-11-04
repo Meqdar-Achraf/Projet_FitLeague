@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -24,12 +23,13 @@
                 <p class="font-thin text-sm">Vue d'ensemble de votre activité sportive</p>
 
             </div>
-            <button id="Creer-defis" class="bg-lime-400 rounded-xl h-[35px] flex items-center p-2 mt-5 mr-8"> + Créer un défi</button>
+            <button id="Creer-defis" class="bg-lime-400 rounded-xl h-[35px] flex items-center p-2 mt-5 mr-8"> + Créer un
+                défi</button>
         </header>
-        
+
         <!--------->
         <!--Cards-->
-<section class="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full px-4 lg:px-9 mb-8">
+        <section class=" grid grid-cols-2 lg:grid-cols-4 gap-4 w-full px-4 lg:px-9 mb-8 ">
             <!-- Card 1 -->
             <article class="flex items-center gap-3 bg-white border border-slate-200 rounded-xl p-4 ">
                 <img class="text-5xl h-9 w-9 bg-[#7DCB0016] rounded-full" src="assets/trophy.png" alt="">
@@ -71,10 +71,12 @@
             </article>
 
         </section>
-        <!-------------->
+
 
         <!--Defits recents-->
-<section class="flex flex-col lg:flex-row ml-0 p-0 gap-0">            <article class=" w-full !ml-0 p-0 lg:bg-[#FFFFFF] w-1/2 border-1 border-solid border-slate-200 rounded-xl p-8  ml-9  ">
+        <section class="flex flex-row ml-0 p-0 gap-5 ">
+            <article id="defis-container"
+                class=" w-full !ml-0 p-0 lg:bg-[#FFFFFF] w-1/2 border-1 border-solid border-slate-200 rounded-xl p-8  !ml-9  ">
                 <header class="flex justify-around mb-8">
                     <h4 class="text-[#14263D font-semibold
 ]">Défis récents</h4>
@@ -84,7 +86,7 @@
                 </header>
                 <!--Defi 30 jours de course-->
 
-                <div class="grid grid-cols-4 border-b-1 border-b-slate-200 pb-4 pt-4 ">
+                <!-- <div class="grid grid-cols-4 border-b-1 border-b-slate-200 pb-4 pt-4 ">
                     <img class="flex h-11 w-11 rounded-xl "
                         src="https://img.passeportsante.net/1200x675/2021-05-03/i101950-comment-courir-10-km-en-45-minutes.webp"
                         alt="">
@@ -96,9 +98,9 @@
                         class="bg-[#E1F8EB] rounded-xl h-[25px] w-[35px] text-[#00994C] flex items-center justify-center justify-self-center">
                         actif</p>
                     <p>12/04/2026</p>
-                </div>
+                </div> -->
 
-                <div class=" grid grid-cols-4 border-b-1 border-b-slate-200 pb-4 pt-4">
+                <!-- <div class=" grid grid-cols-4 border-b-1 border-b-slate-200 pb-4 pt-4">
                     <img class="h-11 w-11 rounded-xl"
                         src="https://img.passeportsante.net/1200x675/2021-05-03/i101950-comment-courir-10-km-en-45-minutes.webp"
                         alt="">
@@ -110,8 +112,8 @@
                         class="bg-[#E1F8EB] rounded-xl h-[25px] w-[35px] text-[#00994C] rounded-xl h-[25px] w-[35px] text-[#00994C] justify-self-center ">
                         actif</p>
                     <p>12/04/2026</p>
-                </div>
-                <div class="grid grid-cols-4  border-b-1 border-b-slate-200 pb-4 pt-4">
+                </div> -->
+                <!-- <div class="grid grid-cols-4  border-b-1 border-b-slate-200 pb-4 pt-4">
                     <img class="h-11 w-11 rounded-xl"
                         src="
                         https://img.passeportsante.net/1200x675/2021-05-03/i101950-comment-courir-10-km-en-45-minutes.webp" alt="">
@@ -145,17 +147,18 @@
                         class="bg-[#E1F8EB] rounded-xl h-[25px]  bg-w-[10px] w-[35px] text-[#00994C] justify-self-center">
                         actif</p>
                     <p>12/04/2026</p>
-                </div>
+                </div> -->
             </article>
             <!-------------->
             <!--Meilleurs performances-->
             <!-------------->
-            <article class="w-full !ml-0 lg:grid-rows-6 bg-[#FFFFFF] w-1/2 border-1 border-solid border-slate-200 rounded-xl p-8 pb-3 mr-9 ml-5"" >
-                <header class=" flex justify-around mb-">
+            <article id="Meilleursdefis"
+                class="w-full !ml-0 lg:grid-rows-6 bg-[#FFFFFF] w-1/2 border-1 border-solid border-slate-200 rounded-xl p-8 pb-3 mr-9 ml-5 !mb-8">
+                <header class=" flex justify-around mb-8">
                     <h4 class="text-[#14263D] font-semibold">Meilleurs performances</h4>
                     <a class="font-semibold text-[#00994C]" href="#">Voir tout</a>
                 </header>
-
+                <!-- 
                 <div class="grid grid-cols-3 pb-4 pt-4 border-b-1 border-b-slate-200">
                     <img class="flex h-7 w-7 bg-[#E5EFF6] rounded-full" src="assets/footprints.png" alt="">
                     <div class="flex flex-col">
@@ -196,7 +199,7 @@
                         <p>Lucas Bernard</p>
                     </div>
                     <p class="flex justify-center">12 h</p>
-                </div>
+                </div> -->
             </article>
         </section>
 
@@ -214,37 +217,52 @@
         </aside>
 
         <!--Form-->
-        <section class=" border p-5 w-100 ">
-            <header>
-                <h1>Créer un défis</h1>
-            </header>
-            <!--form-->
-            <form>
-                <label>un titre</label>
-                <br>
-                <input type="text" placeholder="entrer un titre" class="border border-gray-400 rounded-sm">
-                <br><br>
-                <label>un sport</label>
-                <br>
-                <input type="text" placeholder="entrer un sport" class="border border-gray-400 rounded-sm">
-                <br><br>
-                <label>une description</label>
-                <br>
-                <textarea type="text" placeholder="entrer une description"
-                    class="border border-gray-400 rounded-sm"></textarea>
-                <br><br>
-                <label>l'objectif</label>
-                <br>
-                <input type="text" placeholder="entrer l'objectif" class="border border-gray-400 rounded-sm">
-                <br><br>
-                <label>une date limite</label>
-                <br>
-                <input type="date" placeholder="entrer la date limite" class="border border-gray-400 rounded-sm">
-                <br><br>
-                <button class="bg-lime-400 rounded-xl w-full">Créer défis</button>
-            </form>
+        <div id="form-container" class="hidden fixed inset-0 bg-black/50 flex justify-center items-center ">
+            <div class="bg-white  w-fit rounded-xl p-5 shadow-2xl px-10
+
+">
+<button id="close-btn" class="float-right text-xl font-bold text-red-600">
+    &times;
+</button>
+                <div class="mb-5">
+                    <h2 class="font-bold text-lg
+
+">Créer un défi</h2>
+                    <p class="text-slate-500">Eemplissez les informations de votre défi</p>
+                </div>
+                <form>
+
+                    <label for="" class="font-semibold">Un titre</label><br>
+                    <input type="text" placeholder="Entrer un titre"
+                        class="border border-slate-300 rounded-lg  mb-2 w-full p-2"><br>
+
+
+                    <label for="" class="font-semibold">Un sport</label><br>
+                    <input type="text" placeholder="Entrer un sport"
+                        class="border border-slate-300 rounded-lg mb-2 w-full p-2  "><br>
+
+                    <label for="" class="font-semibold">Une description</label><br>
+                    <textarea class="border border-slate-300 rounded-lg mb-2 w-full p-2" name=""
+                        id="">Entrer une description</textarea><br>
+
+                    <label for="" class="font-semibold">L'objectif</label><br>
+                    <input type="text" placeholder="Entrer l'objectif"
+                        class="border border-slate-300 rounded-lg mb-2 w-full p-2"><br>
+
+                    <label for="" class="font-semibold">Une date limite</label><br>
+
+                    <input type="date" class="border border-slate-300 rounded-lg mb-2 w-full p-2"><br>
+                    <button class="bg-lime-400 w-full rounded-lg font-semibold p-2">Submit</button>
+
+                </form>
+            </div>
+        </div>
+
+
         </section>
     </main>
+    <script src="tableau-de-bord-data.js"></script>
+    <script src="js/tableau-de-bord.js"></script>
 </body>
 
 </html>
