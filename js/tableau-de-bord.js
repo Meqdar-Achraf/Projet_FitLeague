@@ -1,6 +1,6 @@
 const container = document.querySelector("#defis-container");
 defisrecents.forEach((defi) => {
-  const ali = `<div class="grid grid-cols-4 border-b-1 border-b-slate-200 pb-4 pt-4 ">
+  const defisrecent = `<div class="grid grid-cols-4 border-b-1 border-b-slate-200 pb-4 pt-4 ">
   <img class="flex h-11 w-11 rounded-xl "
                                 src="${defi.image}"
                                 alt="">
@@ -13,12 +13,12 @@ defisrecents.forEach((defi) => {
                                 ${defi.status}</p>
                             <p>${defi.date}</p>
                         </div>`;
-  container.innerHTML += ali;
+  container.innerHTML += defisrecent;
 });
 
 const meilleursDefis = document.querySelector("#Meilleursdefis")
 meilleurdefis.forEach((meilleurDefi)=>{
-    const taha= `<div class="grid grid-cols-3 pb-4 pt-4 border-b-1 border-b-slate-200">
+    const leMeilleurDefi = `<div class="grid grid-cols-3 pb-4 pt-4 border-b-1 border-b-slate-200">
                     <img class="$flex h-7 w-7 bg-[#E5EFF6] rounded-full" src="${meilleurDefi.image}" alt="">
                     <div class="flex flex-col">
                         <p>${meilleurDefi.titre}</p>
@@ -26,7 +26,7 @@ meilleurdefis.forEach((meilleurDefi)=>{
                     </div>
                     <p class="flex justify-center">${meilleurDefi.distance}</p>
                 </div>`
-                meilleursDefis.innerHTML+=taha
+                meilleursDefis.innerHTML+= leMeilleurDefi
             
 })
 
