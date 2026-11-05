@@ -102,9 +102,43 @@
         
           <button type="button" id="valider-user" class="bg-[#B6F23A] w-87.5 h-10 flex justify-center items-center rounded-lg font-bold text-[#101828] text-sm hover:cursor-pointer mb-5">Ajouter</button>
       </form>
-      <!-- ------------- -->
+      <!-- ------------ -->
 
-      <div>
+      <!-- modify user -->
+            <form id="modify-user_modal" class="m-[auto] hidden px-5 w-100 border-2 border-gray-400 bg-slate-50 rounded-xl absolute left-[40vw] top-[30vh]">
+        <div class="flex justify-between mb-10 mt-5">
+          <div>
+            <h2 class="text-3xl font-bold text-[#B6F23A]">Modifier Participant</h2>
+            <p class=""></p>
+          </div>
+          <button type="button" id="quit-user_modifyer"
+            class=" relative -top-5 left-5 w-10 h-10 flex hover:cursor-pointer items-center justify-center hover:text-[#B6F23A]"><i
+              class="fa-regular fa-circle-xmark "></i></button>
+        </div>
+        <article class="flex gap-5">
+          <div>
+            <label>Nom</label><br>
+            <input id="moduser_firstname" class="pl-1 mb-2.5 border-2 border-gray-400 rounded-lg w-41 h-10 focus:border-outline focus:outline-[#B6F23A]" type="text" placeholder="Nom" aria-label=""
+              required><br>
+          </div>
+          <div>
+            <label class="">Prenom</label><br>
+            <input id="moduser_lastname" class="pl-1 mb-2.5 border-2 border-gray-400 rounded-lg w-41 h-10 focus:border-outline focus:outline-[#B6F23A]" type="text" placeholder="Prenom" aria-label=""
+            required><br>
+          </div>
+        </article>
+
+        <label class="">Pseudo</label><br>
+        <input id="moduser_pseudo" class="pl-1 mb-2.5 border-2 border-gray-400 rounded-lg w-87.5 h-10 focus:border-outline focus:outline-[#B6F23A]" type="text" placeholder="@Pseudo"
+          aria-label="" required><br>
+        <label class="  ">age</label><br>
+        <input id="moduser_age" class="border-2 border-gray-400 rounded-lg w-87.5 h-10 pl-2 mb-2.5 focus:border-outline focus:outline-[#B6F23A]" type="text" placeholder="Age" aria-label="" required><br>
+        
+          <button type="button" id="modifier-participant" class="bg-[#B6F23A] w-87.5 h-10 flex justify-center items-center rounded-lg font-bold text-[#101828] text-sm hover:cursor-pointer mb-5">Modifier</button>
+      </form>
+      <!-- --------------- -->
+
+      <div class="grid  gap-10  mt-20">
         <table class="bg-slate-100 shadow-sm shadow-black  rounded-lg">
           <thead class="w-full border-b-1 border-slate-300">
             <tr class="">
@@ -116,15 +150,17 @@
           </thead>
 
           <tbody id="participant-row_list" class="">
-            <!-- <tr class="border-b-1 border-[#edf0f5]">
-                    <td class="py-2 pl-2 flex gap-4"> <img class="w-7 h-7 p-1 rounded-full ring-2 ring-default" src="users_profile/481040803975295732.jpg" alt="Bordered avatar">Sarah Lefèvres</td>
-                    <td class="py-2"></td>
-                    <td class="py-2"></td>
-                    <td class="py-2"><div class="flex gap-2"><button class="w-7.5 h-7.5 flex items-center justify-center bg-sky-100 rounded-lg text-sky-500"><i class="fa-solid fa-pencil"></i></button> <button class="rounded-lg  bg-rose-100 text-rose-500 w-7.5 h-7.5 flex items-center justify-center"><i class="fa-regular fa-circle-xmark "></i></button></div></td>
-                  </tr> -->
-
           </tbody>
         </table>
+        <div class="grid grid-cols-2 gap-20">
+          <div class="bg-[url(assets/images/Nature-classement.png)] bg-cover w-200 h-75 rounded-2xl">
+            <h2 class="text-5xl text-slate-50 font-bold p-5 flex justify-between"><i class="fa-solid fa-trophy text-[gold] text-6xl"></i>Classement</h2>
+            <p class="text-xl text-white font-semibold p-5">Les meilleurs participants pour chaque défi.</p>
+            <a href="#" class="px-10 py-3.5 bg-[#B6F23A] relative left-10 top-5 rounded-xl text-2xl text[#101828] font-bold "><i class="fa-solid fa-trophy "></i>Classement</a>
+          </div>
+          
+
+        </div>
       </div>
     </section>
   </main>
