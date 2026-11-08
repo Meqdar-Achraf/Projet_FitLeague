@@ -112,31 +112,30 @@ function modify_user(){
   document.querySelectorAll(".modify_user").forEach(btn =>{
     btn.addEventListener('click', (event)=>{
     let  participantID = event.currentTarget.getAttribute("data-mod")
-    usermod = users.find(participant => participantID == participant.ID);
-      console.log(usermod)
-      if (!usermod) return;
+      // console.log(usermod)
+      // if (!usermod) return;
       open_modal("modify-user_modal")
       close_modal("quit-user_modifyer")
-      document.getElementById('moduser_firstname').value = usermod.name.split(' ')[0];
-      document.getElementById('moduser_lastname').value = usermod.name.split(' ')[1];
-      document.getElementById('moduser_pseudo').value = usermod.pseudo;
-      document.getElementById('moduser_age').value = usermod.age;
-      participantmodification(usermod)
+      // document.getElementById('moduser_firstname').value = usermod.name.split(' ')[0];
+      // document.getElementById('moduser_lastname').value = usermod.name.split(' ')[1];
+      // document.getElementById('moduser_pseudo').value = usermod.pseudo;
+      // document.getElementById('moduser_age').value = usermod.age;
+      participantmodification(participantID)
     })
   })
 }
 
 document.getElementById("quit-user_modifyer").addEventListener('click',()=>{close_modal("modify-user_modal")})
-function participantmodification(user){
-  console.log(user)
+function participantmodification(id){
+  const usermod = users.find(participant => id == participant.ID);
   document.getElementById("modifier-participant").addEventListener('click',()=>{
     const mName = `${document.getElementById("moduser_firstname").value} ${document.getElementById("moduser_lastname").value}`
     const mPseudo =`${document.getElementById("moduser_pseudo").value}`
     const mAge =`${document.getElementById("moduser_age").value}`
 
-    user.name = mName
-    user.pseudo = mPseudo
-    user.age = mAge
+    usermod.name = mName
+    usermod.pseudo = mPseudo
+    usermod.age = mAge
     close_modal("modify-user_modal")
     users_list.innerHTML = "";
     affiche_participants(users)
@@ -150,3 +149,5 @@ function participantmodification(user){
   users_list.innerHTML = "";
   affiche_participants(resultparticipants)
   })
+
+  
