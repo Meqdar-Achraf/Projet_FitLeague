@@ -14,6 +14,7 @@ function affiche_participants(list){
   });
   const btn_delete = document.querySelectorAll(".delete_user");
   delete_user(btn_delete)
+  modify_user()
 }
 
 
@@ -31,34 +32,33 @@ function participantinfo(element){
 function participantbuttons(element){
   const pbutton = `<td class="py-2">
     <div class="flex gap-2">
-      <button  button-data="${element.ID}" class="modify_user w-7.5 h-7.5 flex items-center justify-center bg-sky-100 rounded-lg text-sky-500 hover:cursor-pointer"><i class="fa-solid fa-pencil"></i></button>
+      <button  data-mod="${element.ID}" class="modify_user w-7.5 h-7.5 flex items-center justify-center bg-sky-100 rounded-lg text-sky-500 hover:cursor-pointer"><i class="fa-solid fa-pencil"></i></button>
       <button  button-data="${element.ID}" class="delete_user rounded-lg bg-rose-100 text-rose-500 w-7.5 h-7.5 flex items-center justify-center hover:cursor-pointer"><i class="fa-regular fa-circle-xmark "></i></button>
     </div>
    </td>`
    return pbutton
 }
 affiche_participants(users);
-console.log(users_list)
-// close and open modaL
+
 
 document.getElementById("btn-creat_users").addEventListener("click", () => {
-  open_modal();
+  open_modal("add-user_modal");
 });
 
-const open_modal = () => {
+const open_modal = (modal_id) => {
   document
-    .getElementById("add-user_modal")
+    .getElementById(modal_id)
     .classList.replace("hidden", "block");
 };
 
-const close_modal = () => {
+const close_modal = (modal_id) => {
   document
-    .getElementById("add-user_modal")
+    .getElementById(modal_id)
     .classList.replace("block", "hidden");
 };
 
 document.getElementById("quit-user_ajout").addEventListener("click", () => {
-  close_modal();
+  close_modal("add-user_modal");
 });
 
 // ajouter participants
@@ -88,22 +88,66 @@ const btn_validation = document.getElementById("valider-user");
 
 btn_validation.addEventListener("click", () => {
   addparticipants();
-  close_modal();
+  close_modal("add-user_modal");
 });
 
-// supprimer participants
 
-// const btn_delete = document.querySelectorAll(".delete_user");
+// supprimer participants
 function delete_user(btnsdelete) {
   btnsdelete.forEach(btn => eventdelete(btn))
 }
-
 function eventdelete(button){
       button.addEventListener('click', ()=>{
-        const userdel = users.findIndex(user => button.getAttribute("button-data") == user.ID);
-        users.splice(userdel, 1)
+        const userdelindex = users.findIndex(user => button.getAttribute("button-data") == user.ID);
+        users.splice(userdelindex, 1)
         users_list.innerHTML = "";
         affiche_participants(users);
     })
 }
-// delete_user(btn_delete)
+
+3.
+// modification des participants
+let usermod = {};
+function modify_user(){
+  document.querySelectorAll(".modify_user").forEach(btn =>{
+    btn.addEventListener('click', (event)=>{
+    let  participantID = event.currentTarget.getAttribute("data-mod")
+      // console.log(usermod)
+      // if (!usermod) return;
+      open_modal("modify-user_modal")
+      close_modal("quit-user_modifyer")
+      // document.getElementById('moduser_firstname').value = usermod.name.split(' ')[0];
+      // document.getElementById('moduser_lastname').value = usermod.name.split(' ')[1];
+      // document.getElementById('moduser_pseudo').value = usermod.pseudo;
+      // document.getElementById('moduser_age').value = usermod.age;
+      participantmodification(participantID)
+    })
+  })
+}
+
+document.getElementById("quit-user_modifyer").addEventListener('click',()=>{close_modal("modify-user_modal")})
+function participantmodification(id){
+  const usermod = users.find(participant => id == participant.ID);
+  document.getElementById("modifier-participant").addEventListener('click',()=>{
+    const mName = `${document.getElementById("moduser_firstname").value} ${document.getElementById("moduser_lastname").value}`
+    const mPseudo =`${document.getElementById("moduser_pseudo").value}`
+    const mAge =`${document.getElementById("moduser_age").value}`
+
+    usermod.name = mName
+    usermod.pseudo = mPseudo
+    usermod.age = mAge
+    close_modal("modify-user_modal")
+    users_list.innerHTML = "";
+    affiche_participants(users)
+  })}
+
+  // search participants
+
+  const search = document.getElementById("searchInput")
+  search.addEventListener('input', event =>{
+  const resultparticipants = users.filter(participant => participant.name.toLowerCase().startsWith(search.value.toLowerCase()));
+  users_list.innerHTML = "";
+  affiche_participants(resultparticipants)
+  })
+
+  
